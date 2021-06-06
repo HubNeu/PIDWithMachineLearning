@@ -58,5 +58,6 @@ We then train it for 500 generations (usually we get the best result after ~350 
 We evalute the model (assign a score to the model, score is smaller the better the model, and we need an inverse, so then we perform just that:
 final_score = 1/score\*1000<br />
 Teaching the model:<br />
+<br />
 ![image](https://user-images.githubusercontent.com/49408414/120941751-c2730500-c724-11eb-82c5-dd1481ebc978.png)<br />
 The actual values we get from this model are very simmilar, just slightly worse.
