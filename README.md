@@ -13,15 +13,15 @@ Project structure:
 Introduction:
   This is the project containing everything I did for my Intelligent Control Systems class. The main problem I tackle here is the filling problem, mixing is additional, less important:
 
-filling process:
-![image](https://user-images.githubusercontent.com/49408414/120939845-45db2900-c71a-11eb-9d00-b547afffe7b6.png)
-![image](https://user-images.githubusercontent.com/49408414/120939849-4e336400-c71a-11eb-8c8b-362b368c5df6.png)
-![image](https://user-images.githubusercontent.com/49408414/120939882-7b801200-c71a-11eb-94a8-90d4b99e8953.png)
-![image](https://user-images.githubusercontent.com/49408414/120940046-6e175780-c71b-11eb-845f-f87558df5b43.png)
+filling process:<br />
+![image](https://user-images.githubusercontent.com/49408414/120939845-45db2900-c71a-11eb-9d00-b547afffe7b6.png)<br />
+![image](https://user-images.githubusercontent.com/49408414/120939849-4e336400-c71a-11eb-8c8b-362b368c5df6.png)<br />
+![image](https://user-images.githubusercontent.com/49408414/120939882-7b801200-c71a-11eb-94a8-90d4b99e8953.png)<br />
+![image](https://user-images.githubusercontent.com/49408414/120940046-6e175780-c71b-11eb-845f-f87558df5b43.png)<br />
 
-mixing process:
-![image](https://user-images.githubusercontent.com/49408414/120939820-22b07980-c71a-11eb-837d-1287a98849ad.png)
-![image](https://user-images.githubusercontent.com/49408414/120939866-61deca80-c71a-11eb-8f0e-e6a1fb20eff5.png)
+mixing process:<br />
+![image](https://user-images.githubusercontent.com/49408414/120939820-22b07980-c71a-11eb-837d-1287a98849ad.png)<br />
+![image](https://user-images.githubusercontent.com/49408414/120939866-61deca80-c71a-11eb-8f0e-e6a1fb20eff5.png)<br />
 
   Since the math problem was already defined (I was given the equations to run), I *only* had to implement the PID controller and the machine learning part. PID controller was simple. The other was not (btw, I only did machine learning system for filling.py, not mixing.py). It went like this:
   
