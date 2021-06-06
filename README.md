@@ -56,7 +56,7 @@ Due to a bit different way it was defined, it looked like this:<br />
 We then train it for 500 generations (usually we get the best result after ~350 generations) in populations of 100, from which we choose top 3 achievers. The used fitness function looks like this:<br />
 ![image](https://user-images.githubusercontent.com/49408414/120941596-bc305900-c723-11eb-9dfc-39777ca39791.png)<br />
 We evalute the model (assign a score to the model, score is smaller the better the model, and we need an inverse, so then we perform just that:
-final_score = 1/score\*1000
+final_score = 1/score\*1000<br />
 Teaching the model:<br />
 ![image](https://user-images.githubusercontent.com/49408414/120941751-c2730500-c724-11eb-82c5-dd1481ebc978.png)<br />
 The actual values we get from this model are very simmilar, just slightly worse.
