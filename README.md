@@ -34,29 +34,29 @@ mixing process:<br />
   Unfortunately, this is where the second mistake lies: I saved parameters to different files OUT OF ORDER, which means that I had to collect them together and sort after the simulation has finished, before I could move to choosing the best ones. SortedData1 and sortedDataTop5 contain top 1 and 5 (respectively). Even top 1 contains 250k examples, so it's plenty for our nets.
   
 Moving to training neural nets, first linear regression version:
-I decided for and 80-20 split. That gave me 191786 train examples. This is a plot of all the data I got:
-![image](https://user-images.githubusercontent.com/49408414/120940469-bfc0e180-c71d-11eb-9315-8cf818e74535.png)
+I decided for and 80-20 split. That gave me 191786 train examples. This is a plot of all the data I got:<br />
+![image](https://user-images.githubusercontent.com/49408414/120940469-bfc0e180-c71d-11eb-9315-8cf818e74535.png)<br />
 
-Not much useful info, but we still could plot a nice line through the middle though. We go on with normalization and then move to our net definition:
-![image](https://user-images.githubusercontent.com/49408414/120940914-06afd680-c720-11eb-9610-a3947939ddd8.png)
-I probably could've used 3 inputs straight into 3 outputs adn get the same output. Anyway, I got absolute error of 1.31 and square error of 4.92:
-![image](https://user-images.githubusercontent.com/49408414/120941140-5fcc3a00-c721-11eb-91fc-d3bd1b8ece15.png)
-And here are the plots:\n
-![image](https://user-images.githubusercontent.com/49408414/120941209-b8033c00-c721-11eb-8cff-7cf6cbcb7df5.png)
-![image](https://user-images.githubusercontent.com/49408414/120941240-d6693780-c721-11eb-8c87-38f126863ce5.png)
-![image](https://user-images.githubusercontent.com/49408414/120941259-e6811700-c721-11eb-983a-e58a0717c207.png)
-![image](https://user-images.githubusercontent.com/49408414/120941288-0fa1a780-c722-11eb-8c87-f1cf17939319.png)
+Not much useful info, but we still could plot a nice line through the middle though. We go on with normalization and then move to our net definition:<br />
+![image](https://user-images.githubusercontent.com/49408414/120940914-06afd680-c720-11eb-9610-a3947939ddd8.png)<br />
+I probably could've used 3 inputs straight into 3 outputs adn get the same output. Anyway, I got absolute error of 1.31 and square error of 4.92:<br />
+![image](https://user-images.githubusercontent.com/49408414/120941140-5fcc3a00-c721-11eb-91fc-d3bd1b8ece15.png)<br />
+And here are the plots:<br />
+![image](https://user-images.githubusercontent.com/49408414/120941209-b8033c00-c721-11eb-8cff-7cf6cbcb7df5.png)<br />
+![image](https://user-images.githubusercontent.com/49408414/120941240-d6693780-c721-11eb-8c87-38f126863ce5.png)<br />
+![image](https://user-images.githubusercontent.com/49408414/120941259-e6811700-c721-11eb-983a-e58a0717c207.png)<br />
+![image](https://user-images.githubusercontent.com/49408414/120941288-0fa1a780-c722-11eb-8c87-f1cf17939319.png)<br />
 I don't think I need to comment on the effectiveness of this, do I?
 
 Suprisingly, the values we get from this model are quite usable. They were certainly better than anything I could come up with for a system with parameters [10, 1.3 1] where the net's results achieved 99% accuracy in 91 seconds and it took my best settings a 150 seconds. It's certainly better than nothing at all, but it's probably not optimal. 
 
-For the genetic algorithm's model:
-Due to a bit different way it was defined, it looked like this:
-![image](https://user-images.githubusercontent.com/49408414/120941514-678cde00-c723-11eb-8ee4-2c35fa703c3b.png)
-We then train it for 500 generations (usually we get the best result after ~350 generations) in populations of 100, from which we choose top 3 achievers. The used fitness function looks like this:
-![image](https://user-images.githubusercontent.com/49408414/120941596-bc305900-c723-11eb-9dfc-39777ca39791.png)
+  For the genetic algorithm's model:
+Due to a bit different way it was defined, it looked like this:<br />
+![image](https://user-images.githubusercontent.com/49408414/120941514-678cde00-c723-11eb-8ee4-2c35fa703c3b.png)<br />
+We then train it for 500 generations (usually we get the best result after ~350 generations) in populations of 100, from which we choose top 3 achievers. The used fitness function looks like this:<br />
+![image](https://user-images.githubusercontent.com/49408414/120941596-bc305900-c723-11eb-9dfc-39777ca39791.png)<br />
 We evalute the model (assign a score to the model, score is smaller the better the model, and we need an inverse, so then we perform just that:
 final_score = 1/score\*1000
-Teaching the model:
-![image](https://user-images.githubusercontent.com/49408414/120941751-c2730500-c724-11eb-82c5-dd1481ebc978.png)
+Teaching the model:<br />
+![image](https://user-images.githubusercontent.com/49408414/120941751-c2730500-c724-11eb-82c5-dd1481ebc978.png)<br />
 The actual values we get from this model are very simmilar, just slightly worse.
