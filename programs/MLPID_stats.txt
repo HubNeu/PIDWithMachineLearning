@@ -1,0 +1,8 @@
+Area    15.926381
+Beta     6.080413
+Tp       0.549178
+Name: mean, dtype: float64
+Area    3.693254
+Beta    2.660454
+Tp      0.274814
+Name: std, dtype: float64
